@@ -28,7 +28,6 @@ public class Move : MonoBehaviour {
 		if(Input.GetKey(KeyCode.D)){ //0 is left, 1 is right
 			tf.Rotate(0f, 1.5f, 0f);
 		}
-<<<<<<< HEAD
 		if(Input.GetKey (KeyCode.Space)){
 			jumped = true;
 		}
@@ -39,10 +38,6 @@ public class Move : MonoBehaviour {
 			rigidbody.AddForce(Vector3.up * jumpForce);
 			jumped = false;
 		}
-=======
-		//if(Input.GetKey(KeyCode.Space)){ //0 is left, 1 is right
 
-		//}
->>>>>>> 76183e3efb94760f1e4b93d17e95719926201a5e
 	}
 }
