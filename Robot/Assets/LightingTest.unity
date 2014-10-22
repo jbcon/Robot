@@ -315,16 +315,16 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: 4
-  maxSize: 5
+  minSize: 5
+  maxSize: 7.5
   minEnergy: 3
   maxEnergy: 3
   minEmission: 25
   maxEmission: 35
   worldVelocity: {x: 0, y: 0, z: 0}
-  localVelocity: {x: .25, y: .00999999978, z: 0}
+  localVelocity: {x: .100000001, y: .00999999978, z: 0}
   rndVelocity: {x: .00999999978, y: .00999999978, z: .00999999978}
-  emitterVelocityScale: .0500000007
+  emitterVelocityScale: .00999999978
   tangentVelocity: {x: 0, y: 0, z: 0}
   angularVelocity: 0
   rndAngularVelocity: 0
@@ -581,7 +581,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: localVelocity.x
-      value: .25
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: localVelocity.y
@@ -602,6 +602,18 @@ Prefab:
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: m_Ellipsoid.y
       value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
+      propertyPath: minSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
+      propertyPath: maxSize
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
+      propertyPath: emitterVelocityScale
+      value: .00999999978
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
