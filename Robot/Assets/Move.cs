@@ -17,13 +17,16 @@ public class Move : MonoBehaviour {
 			tf.Translate(0.1f, 0f, 0f);
 		}
 		if(Input.GetKey(KeyCode.A)){ //0 is left, 1 is right
-			tf.Rotate(0f, -1f, 0f);
+			tf.Rotate(0f, -1.5f, 0f);
 		}
 		if(Input.GetKey(KeyCode.S)){ //0 is left, 1 is right
 			tf.Translate(-0.1f, 0f, 0f);
 		}
 		if(Input.GetKey(KeyCode.D)){ //0 is left, 1 is right
-			tf.Rotate(0f, 1f, 0f);
+			tf.Rotate(0f, 1.5f, 0f);
 		}
+		//if(Input.GetKey(KeyCode.Space)){ //0 is left, 1 is right
+
+		//}
 	}
 }
