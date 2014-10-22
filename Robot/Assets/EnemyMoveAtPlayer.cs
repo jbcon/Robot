@@ -8,6 +8,8 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 
 	Transform target;
 
+	float stunTime = 5.0f;
+
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
@@ -16,14 +18,20 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		Vector3 offset = (target.position - tf.position);
 		offset.y = 0;
-		//Rotate towards target
-		tf.forward = Vector3.RotateTowards (tf.forward, offset.normalized, (1f * Time.deltaTime), Time.deltaTime);
-		//Set velocity
-		Vector3 newVel = (Vector3.Slerp (tf.forward, offset.normalized, 0.2f) * 5.0f);
-		newVel.y = rb.velocity.y;
-		rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (10.0f * Time.deltaTime));
+		if (stunTime <= 0.0f) {
+			//Rotate towards target
+			Quaternion newRot = new Quaternion ();
+			newRot.SetLookRotation (offset.normalized, Vector3.up);
+			tf.rotation = Quaternion.RotateTowards (tf.rotation, newRot, (360f * Time.deltaTime));
+			//Set velocity
+			Vector3 newVel = (Vector3.Slerp (tf.forward, offset.normalized, 0.2f) * 5.0f);
+			newVel.y = rb.velocity.y;
+			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (10f * Time.deltaTime));
+		} else {
+			stunTime -= Time.deltaTime;
+		}
 	}
 }
