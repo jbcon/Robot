@@ -4,7 +4,10 @@ using System.Collections;
 public class Move : MonoBehaviour {
 
 
+	public float jumpForce = 25f;
+
 	Transform tf;
+	bool jumped = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +27,16 @@ public class Move : MonoBehaviour {
 		}
 		if(Input.GetKey(KeyCode.D)){ //0 is left, 1 is right
 			tf.Rotate(0f, 1f, 0f);
+		}
+		if(Input.GetKey (KeyCode.Space)){
+			jumped = true;
+		}
+	}
+
+	void FixedUpdate(){
+		if(jumped){
+			rigidbody.AddForce(Vector3.up * jumpForce);
+			jumped = false;
 		}
 	}
 }
