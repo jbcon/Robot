@@ -3,14 +3,17 @@ using System.Collections;
 
 public class CollectObject : MonoBehaviour {
 
-	public Texture image1;
-	int image = 0;
+	public Texture image1, image2, image3, i;
+	int imageNum = 0;
+	bool image = false;
 	float fade = 0;
 	bool fadeUp = true;
 
 	// Use this for initialization
 	void Start () {
 		image1 = Resources.Load ("Placeholder") as Texture;
+		image2 = Resources.Load ("Placeholder") as Texture;
+		image3 = Resources.Load ("Placeholder") as Texture;
 	}
 	
 	// Update is called once per frame
@@ -22,15 +25,26 @@ public class CollectObject : MonoBehaviour {
 	{
 		if(col.gameObject.name == "Collectable")
 		{
-			image = 1;
+			image = true;
+			imageNum+=1;
 			Destroy(col.gameObject);
 		}
 	}
 	void OnGUI()
 	{
-		if (image != 0)
+		if (image)
 		{
+			//chose which image to show
+			if (imageNum == 1)
+				i=image1;
+			if (imageNum == 2)
+				i=image2;
+			if (imageNum == 3)
+				i=image3;
+
+			//freeze the game
 			Time.timeScale = 0;
+			//fade the image
 			if (fade<1 && fadeUp)
 				fade += 0.002f;
 			if (fade >= 1 && fadeUp)
@@ -41,19 +55,22 @@ public class CollectObject : MonoBehaviour {
 				}
 
 			}
+			//fade out the image after clicking
 			else if (!fadeUp && fade >=0)
 				fade -= 0.006f;
 			else if (!fadeUp && fade <=0)
 			{
 				fadeUp = true;
 				Time.timeScale = 1;
-				image =0;
+				image =false;
 			}
 
 			Color old = GUI.color;
 			GUI.color = new Color(old.r, old.g, old.b, fade);
-			if (image == 1)
-				GUI.DrawTexture(new Rect(50,50,400,400), image1);
+
+			GUI.DrawTexture(new Rect(Screen.width*0.5f - i.width/2, 
+			                         Screen.height*0.5f - i.height/2,i.width,i.height), i);
+
 			GUI.color = old;
 		}
 	}

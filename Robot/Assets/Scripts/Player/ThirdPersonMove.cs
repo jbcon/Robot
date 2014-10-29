@@ -15,7 +15,10 @@ public class ThirdPersonMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 move = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+		float moveSpeed = move.magnitude;
 		move = (cam.rotation * move);
+		move.y = 0.0f;
+		move = (move.normalized * moveSpeed);
 		SendMessage ("SetInputMoveDirection", move);
 		SendMessage ("SetInputJump", Input.GetButton ("Jump"));
 		//Rotate to match movement
