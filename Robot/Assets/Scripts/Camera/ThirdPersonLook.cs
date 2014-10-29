@@ -19,9 +19,11 @@ public class ThirdPersonLook : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector2 rot = (new Vector2 (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y")) * sensitivity);
-		float rotationX = (tf.localEulerAngles.y + rot.x);
-		rotationY = Mathf.Clamp ((rotationY + rot.y), rotYMin, rotYMax);
-		tf.localEulerAngles = new Vector3 (-rotationY, rotationX, 0f);
+		if (Time.timeScale > 0.0f) {
+			Vector2 rot = (new Vector2 (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y")) * sensitivity);
+			float rotationX = (tf.localEulerAngles.y + rot.x);
+			rotationY = Mathf.Clamp ((rotationY + rot.y), rotYMin, rotYMax);
+			tf.localEulerAngles = new Vector3 (-rotationY, rotationX, 0f);
+		}
 	}
 }
