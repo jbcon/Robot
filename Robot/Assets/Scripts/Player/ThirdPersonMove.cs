@@ -21,7 +21,7 @@ public class ThirdPersonMove : MonoBehaviour {
 		//Rotate to match movement
 		if (move != Vector3.zero) {
 			Quaternion rot = cam.rotation;
-			tf.rotation = Quaternion.RotateTowards (tf.rotation, Quaternion.LookRotation (move), 5.0f);
+			tf.rotation = Quaternion.Slerp (tf.rotation, Quaternion.LookRotation (move), 0.1f);
 			cam.rotation = rot;
 		}
 	}
