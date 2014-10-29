@@ -15,7 +15,6 @@ public class CollectObject : MonoBehaviour {
 
 	void OnControllerColliderHit (ControllerColliderHit col)
 	{
-		Debug.Log ("hit");
 		if(col.gameObject.name == "Collectable")
 		{
 			Destroy(col.gameObject);
