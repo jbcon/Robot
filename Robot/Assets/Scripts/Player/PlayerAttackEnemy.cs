@@ -24,7 +24,9 @@ public class PlayerAttackEnemy : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject.layer == LayerMask.NameToLayer ("Enemy")) {
 			EnemyMoveAtPlayer enemy = other.GetComponentInParent<EnemyMoveAtPlayer> ();
-			if (!enemies.Contains(enemy)) enemies.Add (enemy);
+			if ((enemy != null) && !enemies.Contains(enemy)) {
+				enemies.Add (enemy);
+			}
 		}
 	}
 		
