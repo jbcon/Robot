@@ -4,22 +4,33 @@ using System.Collections;
 public class PlayerAttackEnemy : MonoBehaviour {
 
 	Transform tf;
+	ArrayList enemies;
 
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
+		enemies = new ArrayList ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("Fire1")) {
-			Ray ray = new Ray ((tf.position + tf.forward), tf.forward);
-			RaycastHit hit;
-			if (Physics.Raycast (ray, out hit, 3f)) {
-				if (hit.collider.gameObject.tag == "Enemy") {
-					hit.collider.GetComponentInParent<EnemyMoveAtPlayer> ().Hurt (tf.position, tf.forward);
-				}
+			foreach (EnemyMoveAtPlayer obj in enemies) {
+				obj.Hurt (tf.position, tf.forward);
 			}
+		}
+	}
+	
+	void OnTriggerEnter (Collider other) {
+		if (other.gameObject.layer == LayerMask.NameToLayer ("Enemy")) {
+			EnemyMoveAtPlayer enemy = other.GetComponentInParent<EnemyMoveAtPlayer> ();
+			if (!enemies.Contains(enemy)) enemies.Add (enemy);
+		}
+	}
+		
+	void OnTriggerExit (Collider other) {
+		if (other.gameObject.layer == LayerMask.NameToLayer ("Enemy")) {
+			enemies.Remove (other.GetComponentInParent<EnemyMoveAtPlayer> ());
 		}
 	}
 }

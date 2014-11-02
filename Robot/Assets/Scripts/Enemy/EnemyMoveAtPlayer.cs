@@ -19,7 +19,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*
+
 		if (Input.GetMouseButtonDown (0)) {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
@@ -28,7 +28,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 				Hurt (hit.point, dir);
 			}
 		}
-		*/
+
 	}
 
 	void FixedUpdate () {
