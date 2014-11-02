@@ -46,7 +46,7 @@ public class CollectObject : MonoBehaviour {
 			Time.timeScale = 0;
 			//fade the image
 			if (fade<1 && fadeUp)
-				fade += 0.002f;
+				fade += 0.003f;
 			if (fade >= 1 && fadeUp)
 			{
 				if (Input.GetMouseButtonDown(0))
