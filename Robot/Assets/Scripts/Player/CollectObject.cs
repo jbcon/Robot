@@ -3,19 +3,25 @@ using System.Collections;
 
 public class CollectObject : MonoBehaviour {
 
-	public Texture image1, image2, image3, i;
+	public Texture image1, image2, image3, image4, image5, image6, image7, image8, image9, i;
 
-	int imageNum = 0;
+	int imageNum = 1;
 	bool image = false;
 	float fade = 0;
 	bool fadeUp = true;
-	public bool HideBeam = true;
+	public bool ShowBeam = false;
 
 	// Use this for initialization
 	void Start () {
-		image1 = Resources.Load ("Placeholder") as Texture;
-		image2 = Resources.Load ("Placeholder") as Texture;
+		image1 = Resources.Load ("Slide1") as Texture;
+		image2 = Resources.Load ("Slide2") as Texture;
 		image3 = Resources.Load ("Placeholder") as Texture;
+		image4 = Resources.Load ("Slide1") as Texture;
+		image5 = Resources.Load ("Slide2") as Texture;
+		image6 = Resources.Load ("Placeholder") as Texture;
+		image7 = Resources.Load ("Slide1") as Texture;
+		image8 = Resources.Load ("Slide2") as Texture;
+		image9 = Resources.Load ("Placeholder") as Texture;
 
 	}
 	
@@ -29,7 +35,6 @@ public class CollectObject : MonoBehaviour {
 		if(col.gameObject.name == "Collectable")
 		{
 			image = true;
-			imageNum+=1;
 			Destroy(col.gameObject);
 		}
 	}
@@ -43,16 +48,28 @@ public class CollectObject : MonoBehaviour {
 			if (imageNum == 2)
 				i=image2;
 			if (imageNum == 3)
-			{
 				i=image3;
-				HideBeam = false;
+			if (imageNum == 4)
+				i=image4;
+			if (imageNum == 5)
+				i=image5;
+			if (imageNum == 6)
+				i=image6;
+			if (imageNum == 7)
+				i=image7;
+			if (imageNum == 8)
+				i=image8;
+			if (imageNum == 9)
+			{
+				i=image9;
+				ShowBeam = true;
 			}
 
 			//freeze the game
 			Time.timeScale = 0;
 			//fade the image
 			if (fade<1 && fadeUp)
-				fade += 0.003f;
+				fade += 0.015f;
 			if (fade >= 1 && fadeUp)
 			{
 				if (Input.GetMouseButtonDown(0))
@@ -63,12 +80,17 @@ public class CollectObject : MonoBehaviour {
 			}
 			//fade out the image after clicking
 			else if (!fadeUp && fade >=0)
-				fade -= 0.006f;
+				fade -= 0.030f;
 			else if (!fadeUp && fade <=0)
 			{
 				fadeUp = true;
-				Time.timeScale = 1;
-				image =false;
+				imageNum+=1;
+				if(imageNum == 4 || imageNum == 7 || imageNum == 10)
+				{
+					Time.timeScale = 1;
+					image =false;
+				}
+
 			}
 
 			Color old = GUI.color;
