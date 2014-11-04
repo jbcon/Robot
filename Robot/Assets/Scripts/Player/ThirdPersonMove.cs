@@ -33,10 +33,11 @@ public class ThirdPersonMove : MonoBehaviour {
 			cam.rotation = rot;
 		}
 		//Apply pushes
+		anim.SetBool ("Hurt", (pushProp > 0.4f));
 		if (pushProp > 0.5f) {
 			move = Vector3.Lerp (move, (push * 5.0f), Mathf.Min (pushProp, 1f));
-			pushProp -= (2.0f * Time.deltaTime);
 		}
+		pushProp -= (2.0f * Time.deltaTime);
 		//Send the move command
 		SendMessage ("SetInputMoveDirection", move);
 		SendMessage ("SetInputJump", Input.GetButton ("Jump"));
