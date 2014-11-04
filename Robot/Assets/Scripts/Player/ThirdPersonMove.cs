@@ -30,8 +30,8 @@ public class ThirdPersonMove : MonoBehaviour {
 		}
 		//Apply pushes
 		if (pushProp > 0.5f) {
-			move = Vector3.Lerp (move, (push * 5.0f), pushProp);
-			pushProp -= (1.0f * Time.deltaTime);
+			move = Vector3.Lerp (move, (push * 5.0f), Mathf.Min (pushProp, 1f));
+			pushProp -= (2.0f * Time.deltaTime);
 		}
 		//Send the move command
 		SendMessage ("SetInputMoveDirection", move);
@@ -42,6 +42,6 @@ public class ThirdPersonMove : MonoBehaviour {
 		push += (tf.position - from);
 		push.y = 0f;
 		push.Normalize ();
-		pushProp = Mathf.Max (1.0f, pushProp);
+		pushProp = Mathf.Max (1.5f, pushProp);
 	}
 }

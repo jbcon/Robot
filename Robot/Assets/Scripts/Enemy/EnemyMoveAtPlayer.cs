@@ -34,15 +34,30 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 
 	void FixedUpdate () {
 		Vector3 offset = (target.position - tf.position);
-		offset.y = 0;
 		if (stunTime <= 0.0f) {
 			//Rotate towards target
 			Quaternion newRot = new Quaternion ();
-			newRot.SetLookRotation (offset.normalized, Vector3.up);
+			newRot.SetLookRotation (Vector3.Scale (offset.normalized, new Vector3 (1, 0, 1)), Vector3.up);
 			tf.rotation = Quaternion.RotateTowards (tf.rotation, newRot, (360f * Time.deltaTime));
 			rb.angularVelocity = Vector3.zero;
 			//Set velocity
-			Vector3 newVel = (Vector3.Slerp (tf.forward, offset.normalized, 0.2f) * 5.0f);
+			Vector3 newVel = Vector3.Slerp (tf.forward, offset.normalized, 0.2f);
+			float nearDist = Mathf.Infinity;
+			Vector3 nearest = Vector3.zero;
+			foreach (EnemyMoveAtPlayer obj in GameObject.FindObjectsOfType<EnemyMoveAtPlayer> ()) {
+				if (obj == this) continue;
+				Vector3 nearOffset = (obj.GetComponent<Transform> ().position - tf.position);
+				float dist = nearOffset.magnitude;
+				if (dist < nearDist) {
+					nearDist = dist;
+					nearest = nearOffset;
+				}
+			}
+			if (nearDist < 5.0f) {
+				newVel -= (0.75f * nearest.normalized / nearest.magnitude);
+				newVel.Normalize ();
+			}
+			//Attack if close to the player
 			if (offset.magnitude < 2.0f) {
 				newVel = Vector3.zero;
 				if (attackTime < 0.0f) {
@@ -50,6 +65,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 					attackTime = 1.0f;
 				}
 			}
+			newVel *= 5.0f;
 			newVel.y = rb.velocity.y;
 			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (10f * Time.deltaTime));
 		} else {
