@@ -85,6 +85,22 @@ ModelImporter:
     100158: transform26
     100160: transform27
     100162: upperbody
+    100164: antenna_Cntrl
+    100166: head_Cntrl
+    100168: L_armCntrl
+    100170: L_footCntrl
+    100172: L_reverse1
+    100174: L_reverse2
+    100176: L_reverse3
+    100178: L_reverse4
+    100180: lightball
+    100182: R_armCntrl
+    100184: R_footCntrl
+    100186: R_reverse1
+    100188: R_reverse2
+    100190: R_reverse3
+    100192: R_reverse4
+    100194: upperBody_cntrl
     400000: antenna
     400002: antenna1
     400004: antenna2
@@ -167,6 +183,22 @@ ModelImporter:
     400158: transform26
     400160: transform27
     400162: upperbody
+    400164: antenna_Cntrl
+    400166: head_Cntrl
+    400168: L_armCntrl
+    400170: L_footCntrl
+    400172: L_reverse1
+    400174: L_reverse2
+    400176: L_reverse3
+    400178: L_reverse4
+    400180: lightball
+    400182: R_armCntrl
+    400184: R_footCntrl
+    400186: R_reverse1
+    400188: R_reverse2
+    400190: R_reverse3
+    400192: R_reverse4
+    400194: upperBody_cntrl
     4300000: upperbody
     4300002: lowerbody
     4300004: antenna
@@ -194,6 +226,7 @@ ModelImporter:
     4300048: R_lowerleg
     4300050: R_foot
     4300052: head
+    4300054: lightball
     7400000: Take 001
     9500000: //RootNode
     13700000: antenna
@@ -223,6 +256,7 @@ ModelImporter:
     13700048: R_upperarm
     13700050: R_upperleg
     13700052: upperbody
+    13700054: lightball
   materials:
     importMaterials: 1
     materialName: 0
