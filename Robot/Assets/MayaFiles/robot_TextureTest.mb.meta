@@ -1,4 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: c072fc946b7164923bfd5fe738476a87
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName: {}
+=======
 guid: f42eed07c9f32c64da4b6f80f094a862
 ModelImporter:
   serializedVersion: 16
@@ -446,6 +452,7 @@ ModelImporter:
     4300068: polySurface57
     7400000: Take 001
     9500000: //RootNode
+>>>>>>> 8dcaf2f913bb8041bed1950021241b3eb144f6a5
   materials:
     importMaterials: 1
     materialName: 0
