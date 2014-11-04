@@ -23,14 +23,18 @@ public class FaceCamera : MonoBehaviour {
 
 		tf.rotation = Quaternion.LookRotation(point);
 
-		if (GlobalState.gameState == 0)
-			i = i1;
-		else if (GlobalState.gameState == 1)
-			i = i2;
-		else
-			i = i3;
+		//the rest of this script goes for any 2d object
+		//but this part is only for the collectables
+		if (gameObject.name == "Collectable")
+		{
+			if (GlobalState.gameState == 0)
+				i = i1;
+			else if (GlobalState.gameState == 1)
+				i = i2;
+			else
+				i = i3;
 
-		renderer.material.mainTexture = i;
-
+			renderer.material.mainTexture = i;
+		}
 	}
 }

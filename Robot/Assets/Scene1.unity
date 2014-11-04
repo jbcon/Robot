@@ -377,6 +377,7 @@ GameObject:
   - 33: {fileID: 210701950}
   - 136: {fileID: 210701949}
   - 23: {fileID: 210701948}
+  - 114: {fileID: 210701951}
   m_Layer: 0
   m_Name: Beam
   m_TagString: Untagged
@@ -391,8 +392,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210701946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00765250018, y: .347880006, z: .0686570033}
-  m_LocalScale: {x: .666666687, y: 100, z: .429699391}
+  m_LocalPosition: {x: -.0434140004, y: .347880006, z: .0686570033}
+  m_LocalScale: {x: .624853134, y: 93.7279816, z: .402748585}
   m_Children: []
   m_Father: {fileID: 1801719369}
   m_RootOrder: 1
@@ -436,6 +437,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210701946}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &210701951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210701946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db44732475fc64faa85974fb97fe8d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225564801
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +639,6 @@ MonoBehaviour:
   image8: {fileID: 0}
   image9: {fileID: 0}
   i: {fileID: 0}
-  ShowBeam: 0
 --- !u!143 &251023079
 CharacterController:
   m_ObjectHideFlags: 0
@@ -685,6 +696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec14b8bed552f445bb7b34162ea89bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i: {fileID: 0}
 --- !u!23 &357005781
 Renderer:
   m_ObjectHideFlags: 0
@@ -697,7 +712,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 635a18784d1ca4342a864d665806fb35, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -767,6 +782,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec14b8bed552f445bb7b34162ea89bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i: {fileID: 0}
 --- !u!23 &592297900
 Renderer:
   m_ObjectHideFlags: 0
@@ -779,7 +798,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 635a18784d1ca4342a864d665806fb35, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1964,6 +1983,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec14b8bed552f445bb7b34162ea89bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i: {fileID: 0}
 --- !u!23 &1801719371
 Renderer:
   m_ObjectHideFlags: 0
@@ -2085,6 +2108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec14b8bed552f445bb7b34162ea89bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i: {fileID: 0}
 --- !u!1 &1943374624
 GameObject:
   m_ObjectHideFlags: 0
