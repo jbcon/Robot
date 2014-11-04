@@ -6,6 +6,8 @@ public class PlayerAttackEnemy : MonoBehaviour {
 	Transform tf;
 	ArrayList enemies;
 
+	float cooldown = 0f;
+
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
@@ -14,10 +16,15 @@ public class PlayerAttackEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Fire1")) {
-			foreach (EnemyMoveAtPlayer obj in enemies) {
-				obj.Hurt (tf.position, tf.forward);
+		if (cooldown < 0f) {
+			if (Input.GetKeyDown (KeyCode.LeftShift)) {
+				if (enemies.Count > 0) cooldown += 1.5f;
+				foreach (EnemyMoveAtPlayer obj in enemies) {
+					obj.Hurt (tf.position, (tf.forward + new Vector3(0, 0.5f, 0)));
+				}
 			}
+		} else {
+			cooldown -= Time.deltaTime;
 		}
 	}
 	
