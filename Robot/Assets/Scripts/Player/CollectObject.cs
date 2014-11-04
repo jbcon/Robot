@@ -4,16 +4,19 @@ using System.Collections;
 public class CollectObject : MonoBehaviour {
 
 	public Texture image1, image2, image3, i;
+
 	int imageNum = 0;
 	bool image = false;
 	float fade = 0;
 	bool fadeUp = true;
+	public bool HideBeam = true;
 
 	// Use this for initialization
 	void Start () {
 		image1 = Resources.Load ("Placeholder") as Texture;
 		image2 = Resources.Load ("Placeholder") as Texture;
 		image3 = Resources.Load ("Placeholder") as Texture;
+
 	}
 	
 	// Update is called once per frame
@@ -40,7 +43,10 @@ public class CollectObject : MonoBehaviour {
 			if (imageNum == 2)
 				i=image2;
 			if (imageNum == 3)
+			{
 				i=image3;
+				HideBeam = false;
+			}
 
 			//freeze the game
 			Time.timeScale = 0;
