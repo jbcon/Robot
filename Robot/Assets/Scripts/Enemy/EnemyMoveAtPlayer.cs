@@ -9,6 +9,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 	Transform target;
 
 	float stunTime = 5.0f;
+	float attackTime = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -42,12 +43,19 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 			rb.angularVelocity = Vector3.zero;
 			//Set velocity
 			Vector3 newVel = (Vector3.Slerp (tf.forward, offset.normalized, 0.2f) * 5.0f);
-			if (offset.magnitude < 5.0f) newVel = Vector3.zero;
+			if (offset.magnitude < 2.0f) {
+				newVel = Vector3.zero;
+				if (attackTime < 0.0f) {
+					target.SendMessage("Shove", tf.position);
+					attackTime = 1.0f;
+				}
+			}
 			newVel.y = rb.velocity.y;
 			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (10f * Time.deltaTime));
 		} else {
-			stunTime -= Time.deltaTime;
+			stunTime -= Time.fixedDeltaTime;
 		}
+		attackTime -= Time.fixedDeltaTime;
 	}
 
 	public void Hurt (Vector3 pos, Vector3 dir) {

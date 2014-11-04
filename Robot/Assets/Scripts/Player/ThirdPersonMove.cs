@@ -6,6 +6,9 @@ public class ThirdPersonMove : MonoBehaviour {
 	Transform tf;
 	Transform cam;
 
+	Vector3 push = Vector3.zero;
+	float pushProp = 0f;
+
 	// Use this for initialization
 	void Start () {
 		tf = GetComponent<Transform> ();
@@ -19,13 +22,26 @@ public class ThirdPersonMove : MonoBehaviour {
 		move = (cam.rotation * move);
 		move.y = 0.0f;
 		move = (move.normalized * moveSpeed);
-		SendMessage ("SetInputMoveDirection", move);
-		SendMessage ("SetInputJump", Input.GetButton ("Jump"));
 		//Rotate to match movement
 		if (move != Vector3.zero) {
 			Quaternion rot = cam.rotation;
 			tf.rotation = Quaternion.Slerp (tf.rotation, Quaternion.LookRotation (move), 0.1f);
 			cam.rotation = rot;
 		}
+		//Apply pushes
+		if (pushProp > 0.5f) {
+			move = Vector3.Lerp (move, (push * 5.0f), pushProp);
+			pushProp -= (1.0f * Time.deltaTime);
+		}
+		//Send the move command
+		SendMessage ("SetInputMoveDirection", move);
+		SendMessage ("SetInputJump", Input.GetButton ("Jump"));
+	}
+
+	public void Shove (Vector3 from) {
+		push += (tf.position - from);
+		push.y = 0f;
+		push.Normalize ();
+		pushProp = Mathf.Max (1.0f, pushProp);
 	}
 }
