@@ -138,7 +138,7 @@ Material:
       data:
         first:
           name: WaveSpeed
-        second: {r: 9.68770027, g: 4.81898165, b: -7.91322803, a: 2.87029743}
+        second: {r: -.129999995, g: -59.6699982, b: -7.91322803, a: 2.87029743}
       data:
         first:
           name: BumpParm
