@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: bdd3c19e6e568d94bb345c6fa8ef5340
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: antenna
+    100002: antenna1
+    100004: antenna2
+    100006: antenna3
+    100008: antenna4
+    100010: antenna5
+    100012: chest
+    100014: COG
+    100016: COG_cntrl
+    100018: directionalLight1
+    100020: group
+    100022: head
+    100024: head 1
+    100026: L_arm
+    100028: L_elbow
+    100030: L_finger1
+    100032: L_finger1 1
+    100034: L_finger2
+    100036: L_finger2 1
+    100038: L_finger3
+    100040: L_finger3 1
+    100042: L_foot
+    100044: L_foot 1
+    100046: L_hand
+    100048: L_hand 1
+    100050: L_hip
+    100052: L_knee
+    100054: L_knee 1
+    100056: L_lowerleg
+    100058: L_shoulder
+    100060: L_shoulder 1
+    100062: L_toe
+    100064: L_toeend
+    100066: L_upperleg
+    100068: lightbulb
+    100070: lowerbody
+    100072: neck
+    100074: nurbsCube1
+    100076: nurbsCube2
+    100078: nurbsSquare1
+    100080: polySurface16
+    100082: polySurface17
+    100084: polySurface17 1
+    100086: polySurface20
+    100088: polySurface20 1
+    100090: polySurface21
+    100092: polySurface23
+    100094: polySurface34
+    100096: polySurface7
+    100098: R_elbow
+    100100: R_elbow 1
+    100102: R_finger1
+    100104: R_finger1 1
+    100106: R_finger2
+    100108: R_finger2 1
+    100110: R_finger3
+    100112: R_finger3 1
+    100114: R_foot
+    100116: R_foot 1
+    100118: R_hand
+    100120: R_hand 1
+    100122: R_hip
+    100124: R_knee
+    100126: R_knee 1
+    100128: R_lowerarm
+    100130: R_lowerleg
+    100132: R_shoulder
+    100134: R_shoulder 1
+    100136: R_toe
+    100138: R_toeend
+    100140: R_upperarm
+    100142: R_upperleg
+    100144: Robot_World_Cntrl
+    100146: //RootNode
+    100148: spine
+    100150: transform22
+    100152: transform23
+    100154: transform24
+    100156: transform25
+    100158: transform26
+    100160: transform27
+    100162: upperbody
+    100164: antenna_Cntrl
+    100166: head_Cntrl
+    100168: L_armCntrl
+    100170: L_footCntrl
+    100172: L_reverse1
+    100174: L_reverse2
+    100176: L_reverse3
+    100178: L_reverse4
+    100180: lightball
+    100182: R_armCntrl
+    100184: R_footCntrl
+    100186: R_reverse1
+    100188: R_reverse2
+    100190: R_reverse3
+    100192: R_reverse4
+    100194: upperBody_cntrl
+    400000: antenna
+    400002: antenna1
+    400004: antenna2
+    400006: antenna3
+    400008: antenna4
+    400010: antenna5
+    400012: chest
+    400014: COG
+    400016: COG_cntrl
+    400018: directionalLight1
+    400020: group
+    400022: head
+    400024: head 1
+    400026: L_arm
+    400028: L_elbow
+    400030: L_finger1
+    400032: L_finger1 1
+    400034: L_finger2
+    400036: L_finger2 1
+    400038: L_finger3
+    400040: L_finger3 1
+    400042: L_foot
+    400044: L_foot 1
+    400046: L_hand
+    400048: L_hand 1
+    400050: L_hip
+    400052: L_knee
+    400054: L_knee 1
+    400056: L_lowerleg
+    400058: L_shoulder
+    400060: L_shoulder 1
+    400062: L_toe
+    400064: L_toeend
+    400066: L_upperleg
+    400068: lightbulb
+    400070: lowerbody
+    400072: neck
+    400074: nurbsCube1
+    400076: nurbsCube2
+    400078: nurbsSquare1
+    400080: polySurface16
+    400082: polySurface17
+    400084: polySurface17 1
+    400086: polySurface20
+    400088: polySurface20 1
+    400090: polySurface21
+    400092: polySurface23
+    400094: polySurface34
+    400096: polySurface7
+    400098: R_elbow
+    400100: R_elbow 1
+    400102: R_finger1
+    400104: R_finger1 1
+    400106: R_finger2
+    400108: R_finger2 1
+    400110: R_finger3
+    400112: R_finger3 1
+    400114: R_foot
+    400116: R_foot 1
+    400118: R_hand
+    400120: R_hand 1
+    400122: R_hip
+    400124: R_knee
+    400126: R_knee 1
+    400128: R_lowerarm
+    400130: R_lowerleg
+    400132: R_shoulder
+    400134: R_shoulder 1
+    400136: R_toe
+    400138: R_toeend
+    400140: R_upperarm
+    400142: R_upperleg
+    400144: Robot_World_Cntrl
+    400146: //RootNode
+    400148: spine
+    400150: transform22
+    400152: transform23
+    400154: transform24
+    400156: transform25
+    400158: transform26
+    400160: transform27
+    400162: upperbody
+    400164: antenna_Cntrl
+    400166: head_Cntrl
+    400168: L_armCntrl
+    400170: L_footCntrl
+    400172: L_reverse1
+    400174: L_reverse2
+    400176: L_reverse3
+    400178: L_reverse4
+    400180: lightball
+    400182: R_armCntrl
+    400184: R_footCntrl
+    400186: R_reverse1
+    400188: R_reverse2
+    400190: R_reverse3
+    400192: R_reverse4
+    400194: upperBody_cntrl
+    4300000: upperbody
+    4300002: lowerbody
+    4300004: antenna
+    4300006: lightbulb
+    4300008: R_shoulder
+    4300010: L_upperleg
+    4300012: L_knee
+    4300014: R_upperleg
+    4300016: R_knee
+    4300018: L_shoulder
+    4300020: R_upperarm
+    4300022: R_elbow
+    4300024: L_arm
+    4300026: L_hand
+    4300028: L_finger1
+    4300030: L_finger3
+    4300032: L_finger2
+    4300034: R_lowerarm
+    4300036: R_hand
+    4300038: R_finger1
+    4300040: R_finger3
+    4300042: R_finger2
+    4300044: L_foot
+    4300046: L_lowerleg
+    4300048: R_lowerleg
+    4300050: R_foot
+    4300052: head
+    4300054: lightball
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: antenna
+    13700002: head
+    13700004: L_arm
+    13700006: L_finger1
+    13700008: L_finger2
+    13700010: L_finger3
+    13700012: L_foot
+    13700014: L_hand
+    13700016: L_knee
+    13700018: L_lowerleg
+    13700020: L_shoulder
+    13700022: L_upperleg
+    13700024: lightbulb
+    13700026: lowerbody
+    13700028: R_elbow
+    13700030: R_finger1
+    13700032: R_finger2
+    13700034: R_finger3
+    13700036: R_foot
+    13700038: R_hand
+    13700040: R_knee
+    13700042: R_lowerarm
+    13700044: R_lowerleg
+    13700046: R_shoulder
+    13700048: R_upperarm
+    13700050: R_upperleg
+    13700052: upperbody
+    13700054: lightball
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
