@@ -9,7 +9,6 @@ public class CollectObject : MonoBehaviour {
 	bool image = false;
 	float fade = 0;
 	bool fadeUp = true;
-	public bool ShowBeam = false;
 
 	// Use this for initialization
 	void Start () {
@@ -60,10 +59,8 @@ public class CollectObject : MonoBehaviour {
 			if (imageNum == 8)
 				i=image8;
 			if (imageNum == 9)
-			{
 				i=image9;
-				ShowBeam = true;
-			}
+
 
 			//freeze the game
 			Time.timeScale = 0;
@@ -89,6 +86,7 @@ public class CollectObject : MonoBehaviour {
 				{
 					Time.timeScale = 1;
 					image =false;
+					GlobalState.gameState +=1;
 				}
 
 			}
