@@ -39,7 +39,7 @@ public class ThirdPersonMove : MonoBehaviour {
 	}
 
 	public void Shove (Vector3 from) {
-		push += (tf.position - from);
+		push = (tf.position - from);
 		push.y = 0f;
 		push.Normalize ();
 		pushProp = Mathf.Max (1.5f, pushProp);
