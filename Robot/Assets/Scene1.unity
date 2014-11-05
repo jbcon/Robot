@@ -996,6 +996,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0e24f9bbee73cb549a525fcee48dc399, type: 2}
+    - target: {fileID: 1500002, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
+      propertyPath: maxEnergy
+      value: .629999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500004, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
+      propertyPath: maxEnergy
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500004, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
+      propertyPath: minEnergy
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500002, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
+      propertyPath: minEnergy
+      value: .189999998
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6500000, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
@@ -1323,7 +1339,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 235f75c7bbf25cb4799288e023d057b6, type: 2}
   m_PrefabInternal: {fileID: 146330989}
   m_GameObject: {fileID: 234834350}
-  m_LocalRotation: {x: -.309290558, y: .238754645, z: -.541009605, w: .74474448}
+  m_LocalRotation: {x: -.309290528, y: .23875463, z: -.541009545, w: .74474442}
   m_LocalPosition: {x: .0272117928, y: .017514402, z: .0240715146}
   m_LocalScale: {x: .753032565, y: .99999994, z: .753032506}
   m_Children:
@@ -2790,7 +2806,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400026, guid: faed25d87a800874eb0237cbdb3628fe, type: 2}
   m_PrefabInternal: {fileID: 1250154238}
   m_GameObject: {fileID: 521442294}
-  m_LocalRotation: {x: .311266512, y: .783870399, z: .157315344, w: .513723791}
+  m_LocalRotation: {x: .311266512, y: .783870459, z: .157315344, w: .513723791}
   m_LocalPosition: {x: -.0149599575, y: -5.14198518e-07, z: -.00907054637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3917,7 +3933,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400026, guid: faed25d87a800874eb0237cbdb3628fe, type: 2}
   m_PrefabInternal: {fileID: 724846202}
   m_GameObject: {fileID: 749678903}
-  m_LocalRotation: {x: .311266512, y: .783870399, z: .157315344, w: .513723791}
+  m_LocalRotation: {x: .311266512, y: .783870459, z: .157315344, w: .513723791}
   m_LocalPosition: {x: -.0149599575, y: -5.14198518e-07, z: -.00907054637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4931,6 +4947,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bb829db0ae7c2460bb0035f6d2286090, type: 2}
+    - target: {fileID: 2300002, guid: 32e891b4911304a48b3e9638203b6041, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ba0f72bca1d567b47822ab45b37bec95, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32e891b4911304a48b3e9638203b6041, type: 2}
   m_RootGameObject: {fileID: 1801719368}
@@ -6074,7 +6094,7 @@ EllipsoidParticleEmitter:
   m_Emit: 1
   minSize: 1.20000005
   maxSize: 1.20000005
-  minEnergy: 2
+  minEnergy: .189999998
   maxEnergy: .629999995
   minEmission: 35
   maxEmission: 35
@@ -6382,7 +6402,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400092, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
   m_PrefabInternal: {fileID: 869955068}
   m_GameObject: {fileID: 1372928644}
-  m_LocalRotation: {x: .0623356216, y: -.164725274, z: .011862156, w: .984296322}
+  m_LocalRotation: {x: .0623356178, y: -.164725259, z: .0118621551, w: .984296262}
   m_LocalPosition: {x: -.378126889, y: -.118034884, z: -.00101131399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6427,6 +6447,10 @@ Prefab:
     - target: {fileID: 400000, guid: 702ecdfb0dccab846916664f1e2bb146, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 702ecdfb0dccab846916664f1e2bb146, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 702ecdfb0dccab846916664f1e2bb146, type: 2}
@@ -6921,8 +6945,8 @@ EllipsoidParticleEmitter:
   m_Emit: 1
   minSize: 2
   maxSize: 2
-  minEnergy: 2
-  maxEnergy: .610000014
+  minEnergy: .5
+  maxEnergy: .5
   minEmission: 30
   maxEmission: 30
   worldVelocity: {x: 0, y: 0, z: 0}
@@ -8794,7 +8818,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ba0f72bca1d567b47822ab45b37bec95, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9209,7 +9233,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400182, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
   m_PrefabInternal: {fileID: 869955068}
   m_GameObject: {fileID: 1937623466}
-  m_LocalRotation: {x: 0, y: -.465033084, z: 0, w: .885293365}
+  m_LocalRotation: {x: 0, y: -.465033054, z: 0, w: .885293305}
   m_LocalPosition: {x: .928674161, y: .835079849, z: .185459271}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
