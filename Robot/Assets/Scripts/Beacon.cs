@@ -15,7 +15,7 @@ public class Beacon : MonoBehaviour {
 		else
 			renderer.enabled = true;
 		Color color = renderer.material.color;
-		float dis = Vector3.Distance (transform.position, GameObject.Find("RobotController").transform.position) / 100 - 0.3f;
+		float dis = Vector3.Distance (transform.position, GameObject.Find("RobotController").transform.position) / 100 - 0.2f;
 		color.a = dis;
 		renderer.material.color = color;
 
