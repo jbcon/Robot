@@ -106,7 +106,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 		if(GlobalState.gameState==2)
 			stunTime = Mathf.Max (stunTime, 5.0f);
 		if(GlobalState.gameState==3)
-			stunTime = Mathf.Max (stunTime, 7.0f);
+			stunTime = Mathf.Max (stunTime, 5.0f);
 		dir = Vector3.Scale (dir, new Vector3 (1, 0.5f, 1)).normalized;
 		rb.AddForceAtPosition ((800.0f * dir), pos);
 	}
