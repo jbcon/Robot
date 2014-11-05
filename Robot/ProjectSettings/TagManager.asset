@@ -5,6 +5,8 @@ TagManager:
   tags:
   - GameState
   - Enemy
+  - WindSound
+  - AnimaticSound
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
