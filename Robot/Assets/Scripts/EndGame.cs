@@ -25,6 +25,7 @@ public class EndGame : MonoBehaviour {
 		if(col.gameObject.name == "Door" && GlobalState.gameState == 3)
 		{
 			image = true;
+			Destroy(col.gameObject);
 		}
 	}
 
@@ -54,6 +55,9 @@ public class EndGame : MonoBehaviour {
 			{
 
 				//END THE GAME
+
+
+				//If no code was added to end the game, then you can continue roaming
 				Time.timeScale = 1;
 				image =false;
 				GlobalState.gameState +=1;

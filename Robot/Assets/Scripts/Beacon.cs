@@ -10,7 +10,7 @@ public class Beacon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GlobalState.gameState < 3)
+		if (GlobalState.gameState != 3)
 			renderer.enabled = false;
 		else
 			renderer.enabled = true;
