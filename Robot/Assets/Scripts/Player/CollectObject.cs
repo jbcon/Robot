@@ -15,9 +15,9 @@ public class CollectObject : MonoBehaviour {
 		image1 = Resources.Load ("Slide1") as Texture;
 		image2 = Resources.Load ("Slide2") as Texture;
 		image3 = Resources.Load ("Slide3") as Texture;
-		image4 = Resources.Load ("Slide1") as Texture;
-		image5 = Resources.Load ("Slide2") as Texture;
-		image6 = Resources.Load ("Slide3") as Texture;
+		image4 = Resources.Load ("Slide4") as Texture;
+		image5 = Resources.Load ("Slide5") as Texture;
+		image6 = Resources.Load ("Slide6") as Texture;
 		image7 = Resources.Load ("Slide1") as Texture;
 		image8 = Resources.Load ("Slide2") as Texture;
 		image9 = Resources.Load ("Slide3") as Texture;
