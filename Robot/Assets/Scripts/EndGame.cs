@@ -33,7 +33,8 @@ public class EndGame : MonoBehaviour {
 	{
 		if (image)
 		{
-				
+			GameObject animaticSound = GameObject.FindGameObjectWithTag("AnimaticSound");
+			animaticSound.audio.PlayOneShot(animaticSound.audio.clip);
 			
 			//freeze the game
 			Time.timeScale = 0;
