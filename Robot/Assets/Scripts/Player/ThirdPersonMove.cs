@@ -5,7 +5,7 @@ public class ThirdPersonMove : MonoBehaviour {
 	
 	Transform tf;
 	Transform cam;
-
+	Vector3 start;
 	Animator anim;
 
 	Vector3 push = Vector3.zero;
@@ -16,6 +16,8 @@ public class ThirdPersonMove : MonoBehaviour {
 		tf = GetComponent<Transform> ();
 		cam = GetComponentInChildren<ThirdPersonLook> ().GetComponent<Transform> ();
 		anim = GetComponentInChildren<Animator> ();
+
+		start = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -42,6 +44,13 @@ public class ThirdPersonMove : MonoBehaviour {
 		SendMessage ("SetInputMoveDirection", move);
 		SendMessage ("SetInputJump", Input.GetButton ("Jump"));
 		if (Input.GetButtonDown ("Jump")) anim.SetTrigger ("Jump");
+
+		//jump to start when hitting the ocean
+		if(transform.position.y<14)
+			transform.position = start;
+
+
+
 	}
 
 	public void Shove (Vector3 from) {
