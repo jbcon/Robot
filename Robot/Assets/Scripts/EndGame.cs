@@ -11,7 +11,7 @@ public class EndGame : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		i = Resources.Load ("Slide1") as Texture;
+		i = Resources.Load ("Slide10") as Texture;
 
 	}
 	
@@ -25,6 +25,7 @@ public class EndGame : MonoBehaviour {
 		if(col.gameObject.name == "Door" && GlobalState.gameState == 3)
 		{
 			image = true;
+			Destroy(col.gameObject);
 		}
 	}
 
@@ -54,6 +55,10 @@ public class EndGame : MonoBehaviour {
 			{
 
 				//END THE GAME
+				Application.Quit();
+
+				//The game won't quit in the editor
+				//In that case, you'll be in free roam
 				Time.timeScale = 1;
 				image =false;
 				GlobalState.gameState +=1;

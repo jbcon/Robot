@@ -80,7 +80,14 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 	}
 
 	public void Hurt (Vector3 pos, Vector3 dir) {
-		stunTime = Mathf.Max (stunTime, 2.5f);
+		if(GlobalState.gameState==0)
+			stunTime = Mathf.Max (stunTime, 2.5f);
+		if(GlobalState.gameState==1)
+			stunTime = Mathf.Max (stunTime, 3.5f);
+		if(GlobalState.gameState==2)
+			stunTime = Mathf.Max (stunTime, 5.0f);
+		if(GlobalState.gameState==3)
+			stunTime = Mathf.Max (stunTime, 7.0f);
 		dir = Vector3.Scale (dir, new Vector3 (1, 0.5f, 1)).normalized;
 		rb.AddForceAtPosition ((800.0f * dir), pos);
 	}
