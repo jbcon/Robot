@@ -8,7 +8,7 @@ public class PlayAnimaticMusic : MonoBehaviour {
 	public AudioClip clip3;
 
 
-	void playStateClip(){
+	void Update(){
 		if (GlobalState.gameState == 0){
 			audio.clip = clip1;
 		}
