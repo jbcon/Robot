@@ -18,7 +18,7 @@ RenderSettings:
   m_FogDensity: .0299999993
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientLight: {r: .102941155, g: .0938581154, b: .0938581154, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -184,7 +184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &39396466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TerrainData: {fileID: 15600000, guid: 3af6916fa8c20dd4f92889feb83bfa6d, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 167
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -1495,7 +1495,7 @@ Transform:
   - {fileID: 1979712276}
   - {fileID: 620711388}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &251023076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4577,11 +4577,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
       propertyPath: far clip plane
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
+      propertyPath: m_Range
+      value: 8.55000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
+      propertyPath: m_Intensity
+      value: 1.20000005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4de5f4f3e015b21408cb1ebd1e9c8174, type: 2}
@@ -4990,8 +4998,8 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: .784313738, g: .955375314, b: 1, a: 1}
-  m_Intensity: .25
-  m_Range: 50
+  m_Intensity: 1.20000005
+  m_Range: 8.55000019
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -5618,7 +5626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: faed25d87a800874eb0237cbdb3628fe, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: faed25d87a800874eb0237cbdb3628fe, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -6724,7 +6732,7 @@ Transform:
   m_Children:
   - {fileID: 1136416631}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1453281032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10153,4 +10161,4 @@ Transform:
   m_Children:
   - {fileID: 1360803071}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
