@@ -6,17 +6,21 @@ public class PlayAnimaticMusic : MonoBehaviour {
 	public AudioClip clip1;
 	public AudioClip clip2;
 	public AudioClip clip3;
+	public AudioClip clip4;
 
 
 	void Update(){
 		if (GlobalState.gameState == 0){
 			audio.clip = clip1;
 		}
-		if (GlobalState.gameState == 1){
+		else if (GlobalState.gameState == 1){
 			audio.clip = clip2;
 		}
-		if (GlobalState.gameState == 2){
+		else if (GlobalState.gameState == 2){
 			audio.clip = clip3;
+		}
+		else{
+			audio.clip = clip4;
 		}
 	}
 }

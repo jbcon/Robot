@@ -1,6 +1,8 @@
-Robot
+Bob
 =====
-Untitled Unity Robot Game
+WASD: move
+Left shift: attack
+Mouse: camera
 
 - John Conover
 - Devin Hilpert
