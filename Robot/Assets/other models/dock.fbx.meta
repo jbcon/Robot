@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8cad5aadd21ad144eb329494edf616f7
+guid: 19751c408d109cf4db96f5779bd9c9c4
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -40,7 +40,7 @@ ModelImporter:
     4300000: pCube8
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
