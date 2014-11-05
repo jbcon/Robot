@@ -38,39 +38,58 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 		Vector3 offset = (target.position - tf.position);
 		if (stunTime <= 0.0f) {
 			anim.SetBool ("Hit", false);
-			//Rotate towards target
-			Quaternion newRot = new Quaternion ();
-			newRot.SetLookRotation (Vector3.Scale (offset.normalized, new Vector3 (1, 0, 1)), Vector3.up);
-			tf.rotation = Quaternion.RotateTowards (tf.rotation, newRot, (360f * Time.deltaTime));
-			rb.angularVelocity = Vector3.zero;
-			//Set velocity
-			Vector3 newVel = Vector3.Slerp (tf.forward, offset.normalized, 0.2f);
-			float nearDist = Mathf.Infinity;
-			Vector3 nearest = Vector3.zero;
-			foreach (EnemyMoveAtPlayer obj in GameObject.FindObjectsOfType<EnemyMoveAtPlayer> ()) {
-				if (obj == this) continue;
-				Vector3 nearOffset = (obj.GetComponent<Transform> ().position - tf.position);
-				float dist = nearOffset.magnitude;
-				if (dist < nearDist) {
-					nearDist = dist;
-					nearest = nearOffset;
+			//Get chase distance
+			float chaseDist = 0f;
+			switch (GlobalState.gameState) {
+			case (0):
+				chaseDist = 20f;
+				break;
+			case (1):
+				chaseDist = 50f;
+				break;
+			case (2):
+				chaseDist = 150f;
+				break;
+			case (3):
+				chaseDist = 300f;
+				break;
+			}
+			Vector3 newVel = Vector3.zero;
+			if (offset.magnitude < chaseDist) {
+				//Rotate towards target
+				Quaternion newRot = new Quaternion ();
+				newRot.SetLookRotation (Vector3.Scale (offset.normalized, new Vector3 (1, 0, 1)), Vector3.up);
+				tf.rotation = Quaternion.RotateTowards (tf.rotation, newRot, (360f * Time.deltaTime));
+				rb.angularVelocity = Vector3.zero;
+				//Set velocity
+				newVel = Vector3.Slerp (tf.forward, offset.normalized, 0.2f);
+				float nearDist = Mathf.Infinity;
+				Vector3 nearest = Vector3.zero;
+				foreach (EnemyMoveAtPlayer obj in GameObject.FindObjectsOfType<EnemyMoveAtPlayer> ()) {
+					if (obj == this) continue;
+					Vector3 nearOffset = (obj.GetComponent<Transform> ().position - tf.position);
+					float dist = nearOffset.magnitude;
+					if (dist < nearDist) {
+						nearDist = dist;
+						nearest = nearOffset;
+					}
 				}
-			}
-			if (nearDist < 5.0f) {
-				newVel -= (0.75f * nearest.normalized / nearest.magnitude);
-				newVel.Normalize ();
-			}
-			//Attack if close to the player
-			if (offset.magnitude < 3.0f) {
-				newVel = Vector3.zero;
-				if (attackTime < 0.0f) {
-					target.SendMessage("Shove", tf.position);
-					attackTime = 1.0f;
-					anim.SetTrigger ("Attack");
+				if (nearDist < 5.0f) {
+					newVel -= (0.75f * nearest.normalized / nearest.magnitude);
+					newVel.Normalize ();
 				}
+				//Attack if close to the player
+				if (offset.magnitude < 3.0f) {
+					newVel = Vector3.zero;
+					if (attackTime < 0.0f) {
+						target.SendMessage("Shove", tf.position);
+						attackTime = 1.0f;
+						anim.SetTrigger ("Attack");
+					}
+				}
+				newVel *= 7.5f;
+				newVel.y = rb.velocity.y;
 			}
-			newVel *= 10.0f;
-			newVel.y = rb.velocity.y;
 			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (25f * Time.deltaTime));
 		} else {
 			anim.SetBool ("Hit", true);
