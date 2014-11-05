@@ -69,9 +69,9 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 					anim.SetTrigger ("Attack");
 				}
 			}
-			newVel *= 50.0f;
+			newVel *= 10.0f;
 			newVel.y = rb.velocity.y;
-			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (20f * Time.deltaTime));
+			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (25f * Time.deltaTime));
 		} else {
 			anim.SetBool ("Hit", true);
 			stunTime -= Time.fixedDeltaTime;
