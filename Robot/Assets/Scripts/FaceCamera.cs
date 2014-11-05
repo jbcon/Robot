@@ -11,7 +11,7 @@ public class FaceCamera : MonoBehaviour {
 		tf = GetComponent<Transform> ();
 
 		i1 = Resources.Load ("pickup1") as Texture;
-		i2 = Resources.Load ("pickup1") as Texture;
+		i2 = Resources.Load ("pickup2") as Texture;
 		i3 = Resources.Load ("pickup1") as Texture;
 	}
 	
