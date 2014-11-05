@@ -300,7 +300,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .420814484
+        functionName: PlaySoundOnce
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 0e4466eabe6f64045b92e22183a83e2c,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .909502268
+        functionName: PlaySoundOnce
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 0e4466eabe6f64045b92e22183a83e2c,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -1212,7 +1228,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .0407239832
+        functionName: PlaySoundOnce
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 17f48b28c8cea9848978908c4476ebf2,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
