@@ -41,6 +41,10 @@ public class CollectObject : MonoBehaviour {
 	{
 		if (image)
 		{
+			GameObject windSound = GameObject.FindGameObjectWithTag("WindSound");
+			GameObject animaticSound = GameObject.FindGameObjectWithTag("AnimaticSound");
+			windSound.audio.mute = true;
+			animaticSound.audio.PlayOneShot(animaticSound.audio.clip);
 			//chose which image to show
 			if (imageNum == 1)
 				i=image1;
@@ -86,6 +90,7 @@ public class CollectObject : MonoBehaviour {
 				{
 					Time.timeScale = 1;
 					image =false;
+					windSound.audio.mute = false;
 					GlobalState.gameState +=1;
 				}
 
