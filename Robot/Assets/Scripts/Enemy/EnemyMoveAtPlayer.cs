@@ -108,6 +108,6 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 		if(GlobalState.gameState==3)
 			stunTime = Mathf.Max (stunTime, 5.0f);
 		dir = Vector3.Scale (dir, new Vector3 (1, 0.5f, 1)).normalized;
-		rb.AddForceAtPosition ((800.0f * dir), pos);
+		rb.AddForceAtPosition ((875.0f * dir), pos);
 	}
 }
