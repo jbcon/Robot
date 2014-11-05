@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: 1d308914e78e1bb43ac9d91ea8ef2ff8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: contol_center
+    100002: control_backleft
+    100004: control_backright
+    100006: control_frontleft
+    100008: control_frontright
+    100010: control_master
+    100012: controls
+    100014: end_backlefttip
+    100016: end_backrighttip
+    100018: end_frontlefttip
+    100020: end_frontrighttip
+    100022: ik_backleft
+    100024: ik_backright
+    100026: ik_frontleft
+    100028: ik_frontright
+    100030: jnt_backlefthip
+    100032: jnt_backleftknee
+    100034: jnt_backrighthip
+    100036: jnt_backrightknee
+    100038: jnt_center
+    100040: jnt_frontlefthip
+    100042: jnt_frontleftknee
+    100044: jnt_frontrighthip
+    100046: jnt_frontrightknee
+    100048: Lamp
+    100050: //RootNode
+    100052: spider
+    400000: contol_center
+    400002: control_backleft
+    400004: control_backright
+    400006: control_frontleft
+    400008: control_frontright
+    400010: control_master
+    400012: controls
+    400014: end_backlefttip
+    400016: end_backrighttip
+    400018: end_frontlefttip
+    400020: end_frontrighttip
+    400022: ik_backleft
+    400024: ik_backright
+    400026: ik_frontleft
+    400028: ik_frontright
+    400030: jnt_backlefthip
+    400032: jnt_backleftknee
+    400034: jnt_backrighthip
+    400036: jnt_backrightknee
+    400038: jnt_center
+    400040: jnt_frontlefthip
+    400042: jnt_frontleftknee
+    400044: jnt_frontrighthip
+    400046: jnt_frontrightknee
+    400048: Lamp
+    400050: //RootNode
+    400052: spider
+    4300000: spider
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: spider
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
