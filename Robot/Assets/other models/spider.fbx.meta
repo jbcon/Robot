@@ -58,7 +58,9 @@ ModelImporter:
     400050: //RootNode
     400052: spider
     4300000: spider
-    7400000: Take 001
+    7400000: Walking
+    7400002: Attacking
+    7400004: Getting hit
     9500000: //RootNode
     13700000: spider
   materials:
@@ -76,11 +78,251 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: controls
+        weight: 1
+      - path: controls/contol_center
+        weight: 1
+      - path: controls/control_backleft
+        weight: 1
+      - path: controls/control_backleft/ik_backleft
+        weight: 1
+      - path: controls/control_backright
+        weight: 1
+      - path: controls/control_backright/ik_backright
+        weight: 1
+      - path: controls/control_frontleft
+        weight: 1
+      - path: controls/control_frontleft/ik_frontleft
+        weight: 1
+      - path: controls/control_frontright
+        weight: 1
+      - path: controls/control_frontright/ik_frontright
+        weight: 1
+      - path: controls/control_master
+        weight: 1
+      - path: jnt_center
+        weight: 1
+      - path: jnt_center/jnt_backlefthip
+        weight: 1
+      - path: jnt_center/jnt_backlefthip/jnt_backleftknee
+        weight: 1
+      - path: jnt_center/jnt_backlefthip/jnt_backleftknee/end_backlefttip
+        weight: 1
+      - path: jnt_center/jnt_backrighthip
+        weight: 1
+      - path: jnt_center/jnt_backrighthip/jnt_backrightknee
+        weight: 1
+      - path: jnt_center/jnt_backrighthip/jnt_backrightknee/end_backrighttip
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip/jnt_frontleftknee
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip/jnt_frontleftknee/end_frontlefttip
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip/jnt_frontrightknee
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip/jnt_frontrightknee/end_frontrighttip
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: spider
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attacking
+      takeName: Take 001
+      firstFrame: 33
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: controls
+        weight: 1
+      - path: controls/contol_center
+        weight: 1
+      - path: controls/control_backleft
+        weight: 1
+      - path: controls/control_backleft/ik_backleft
+        weight: 1
+      - path: controls/control_backright
+        weight: 1
+      - path: controls/control_backright/ik_backright
+        weight: 1
+      - path: controls/control_frontleft
+        weight: 1
+      - path: controls/control_frontleft/ik_frontleft
+        weight: 1
+      - path: controls/control_frontright
+        weight: 1
+      - path: controls/control_frontright/ik_frontright
+        weight: 1
+      - path: controls/control_master
+        weight: 1
+      - path: jnt_center
+        weight: 1
+      - path: jnt_center/jnt_backlefthip
+        weight: 1
+      - path: jnt_center/jnt_backlefthip/jnt_backleftknee
+        weight: 1
+      - path: jnt_center/jnt_backlefthip/jnt_backleftknee/end_backlefttip
+        weight: 1
+      - path: jnt_center/jnt_backrighthip
+        weight: 1
+      - path: jnt_center/jnt_backrighthip/jnt_backrightknee
+        weight: 1
+      - path: jnt_center/jnt_backrighthip/jnt_backrightknee/end_backrighttip
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip/jnt_frontleftknee
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip/jnt_frontleftknee/end_frontlefttip
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip/jnt_frontrightknee
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip/jnt_frontrightknee/end_frontrighttip
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: spider
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Getting hit
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: controls
+        weight: 1
+      - path: controls/contol_center
+        weight: 1
+      - path: controls/control_backleft
+        weight: 1
+      - path: controls/control_backleft/ik_backleft
+        weight: 1
+      - path: controls/control_backright
+        weight: 1
+      - path: controls/control_backright/ik_backright
+        weight: 1
+      - path: controls/control_frontleft
+        weight: 1
+      - path: controls/control_frontleft/ik_frontleft
+        weight: 1
+      - path: controls/control_frontright
+        weight: 1
+      - path: controls/control_frontright/ik_frontright
+        weight: 1
+      - path: controls/control_master
+        weight: 1
+      - path: jnt_center
+        weight: 1
+      - path: jnt_center/jnt_backlefthip
+        weight: 1
+      - path: jnt_center/jnt_backlefthip/jnt_backleftknee
+        weight: 1
+      - path: jnt_center/jnt_backlefthip/jnt_backleftknee/end_backlefttip
+        weight: 1
+      - path: jnt_center/jnt_backrighthip
+        weight: 1
+      - path: jnt_center/jnt_backrighthip/jnt_backrightknee
+        weight: 1
+      - path: jnt_center/jnt_backrighthip/jnt_backrightknee/end_backrighttip
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip/jnt_frontleftknee
+        weight: 1
+      - path: jnt_center/jnt_frontlefthip/jnt_frontleftknee/end_frontlefttip
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip/jnt_frontrightknee
+        weight: 1
+      - path: jnt_center/jnt_frontrighthip/jnt_frontrightknee/end_frontrighttip
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: spider
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

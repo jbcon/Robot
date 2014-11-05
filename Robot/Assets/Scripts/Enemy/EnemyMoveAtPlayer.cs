@@ -5,6 +5,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 
 	Transform tf;
 	Rigidbody rb;
+	Animator anim;
 
 	Transform target;
 
@@ -15,6 +16,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 	void Start () {
 		tf = GetComponent<Transform> ();
 		rb = GetComponent<Rigidbody> ();
+		anim = GetComponentInChildren<Animator> ();
 		target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
 	}
 	
@@ -35,6 +37,7 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 offset = (target.position - tf.position);
 		if (stunTime <= 0.0f) {
+			anim.SetBool ("Hit", false);
 			//Rotate towards target
 			Quaternion newRot = new Quaternion ();
 			newRot.SetLookRotation (Vector3.Scale (offset.normalized, new Vector3 (1, 0, 1)), Vector3.up);
@@ -58,24 +61,26 @@ public class EnemyMoveAtPlayer : MonoBehaviour {
 				newVel.Normalize ();
 			}
 			//Attack if close to the player
-			if (offset.magnitude < 2.0f) {
+			if (offset.magnitude < 3.0f) {
 				newVel = Vector3.zero;
 				if (attackTime < 0.0f) {
 					target.SendMessage("Shove", tf.position);
 					attackTime = 1.0f;
+					anim.SetTrigger ("Attack");
 				}
 			}
-			newVel *= 5.0f;
+			newVel *= 50.0f;
 			newVel.y = rb.velocity.y;
-			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (10f * Time.deltaTime));
+			rb.velocity = Vector3.MoveTowards (rb.velocity, newVel, (20f * Time.deltaTime));
 		} else {
+			anim.SetBool ("Hit", true);
 			stunTime -= Time.fixedDeltaTime;
 		}
 		attackTime -= Time.fixedDeltaTime;
 	}
 
 	public void Hurt (Vector3 pos, Vector3 dir) {
-		stunTime = Mathf.Max (stunTime, 3.0f);
+		stunTime = Mathf.Max (stunTime, 2.5f);
 		dir = Vector3.Scale (dir, new Vector3 (1, 0.5f, 1)).normalized;
 		rb.AddForceAtPosition ((800.0f * dir), pos);
 	}
