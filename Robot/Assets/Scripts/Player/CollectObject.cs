@@ -44,7 +44,7 @@ public class CollectObject : MonoBehaviour {
 			GameObject windSound = GameObject.FindGameObjectWithTag("WindSound");
 			GameObject animaticSound = GameObject.FindGameObjectWithTag("AnimaticSound");
 			windSound.audio.mute = true;
-			//animaticSound.audio.PlayOneShot(animaticSound.audio.clip);
+			animaticSound.audio.PlayOneShot(animaticSound.audio.clip);
 			//chose which image to show
 			if (imageNum == 1)
 				i=image1;
