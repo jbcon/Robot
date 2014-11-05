@@ -12,7 +12,7 @@ public class FaceCamera : MonoBehaviour {
 
 		i1 = Resources.Load ("pickup1") as Texture;
 		i2 = Resources.Load ("pickup2") as Texture;
-		i3 = Resources.Load ("pickup1") as Texture;
+		i3 = Resources.Load ("pickup3") as Texture;
 	}
 	
 	// Update is called once per frame
